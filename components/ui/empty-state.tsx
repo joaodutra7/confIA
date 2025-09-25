@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { ElementType } from 'react';
 
 interface EmptyStateProps {
-  icon: LucideIcon;
+  icon: ElementType;
   title: string;
   description?: string;
   action?: React.ReactNode;
