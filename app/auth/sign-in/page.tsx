@@ -133,15 +133,15 @@ export default function SignInPage() {
             </form>
 
             {/* Demo credentials */}
-            <div className="mt-6 p-4 bg-muted rounded-lg">
+            {/*<div className="mt-6 p-4 bg-muted rounded-lg">
               <h3 className="text-sm font-medium mb-2">Credenciais de demonstração:</h3>
               <div className="text-xs text-muted-foreground space-y-1">
                 <p><strong>Admin:</strong> admin@ciser.com.br / demo123</p>
                 <p><strong>Inspetor:</strong> inspetor@ciser.com.br / demo123</p>
                 <p><strong>Visualizador:</strong> viewer@ciser.com.br / demo123</p>
               </div>
-            </div>
-
+            </div>*/}
+            
             <div className="mt-4 text-center">
               <p className="text-sm text-muted-foreground">
                 Não tem uma conta?{' '}

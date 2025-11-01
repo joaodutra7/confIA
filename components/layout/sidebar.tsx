@@ -23,9 +23,9 @@ import { FallbackImage } from '@/components/fallback-image';
 const navigation = [
   { name: 'Captura', href: '/app/captura', icon: Camera },
   { name: 'Análises', href: '/app/analises', icon: Search },
-  { name: 'Lotes', href: '/app/lotes', icon: Package },
+  /*{ name: 'Lotes', href: '/app/lotes', icon: Package },*/
   { name: 'Relatórios', href: '/app/relatorios', icon: BarChart3 },
-  { name: 'Calibração', href: '/app/calibracao', icon: Gauge },
+  /*{ name: 'Calibração', href: '/app/calibracao', icon: Gauge },*/
   { name: 'Auditoria', href: '/app/auditoria', icon: FileText },
   { name: 'Configurações', href: '/app/config', icon: Settings },
 ];
