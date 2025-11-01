@@ -230,32 +230,6 @@ export default function CapturaPage() {
     setAnalysis(null);
   };
 
-  const getStatusIcon = (status: AnalysisUI["status"]) => {
-    switch (status) {
-      case "approved":
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-      case "inspection":
-        return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
-      case "rejected":
-        return <XCircle className="h-5 w-5 text-red-500" />;
-      default:
-        return null;
-    }
-  };
-
-  const getStatusText = (status: AnalysisUI["status"]) => {
-    switch (status) {
-      case "approved":
-        return "Aprovado";
-      case "inspection":
-        return "Inspeção";
-      case "rejected":
-        return "Rejeitado";
-      default:
-        return status;
-    }
-  };
-
   const downloadIsolated = () => {
     if (!analysis?.isolatedImage) return;
     const a = document.createElement("a");
@@ -404,36 +378,10 @@ export default function CapturaPage() {
             <CardContent className="space-y-4">
               {analysis ? (
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">Status:</span>
-                    <Badge
-                      variant={
-                        analysis.status === "approved"
-                          ? "default"
-                          : analysis.status === "inspection"
-                          ? "secondary"
-                          : "destructive"
-                      }
-                    >
-                      {getStatusIcon(analysis.status)}
-                      <span className="ml-2">{getStatusText(analysis.status)}</span>
-                    </Badge>
-                  </div>
-
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-sm text-muted-foreground">Corrosão:</span>
+                      <span className="text-lg text-muted-foreground">Corrosão:</span>
                       <span className="text-lg font-bold tabular-nums">{analysis.percent.toFixed(1)}%</span>
-                    </div>
-
-                    <div className="flex justify-between">
-                      <span className="text-sm text-muted-foreground">Pixels corroídos:</span>
-                      <span className="text-sm tabular-nums">{analysis.corrosionPixels.toLocaleString()}</span>
-                    </div>
-
-                    <div className="flex justify-between">
-                      <span className="text-sm text-muted-foreground">Pixels totais:</span>
-                      <span className="text-sm tabular-nums">{analysis.totalPixels.toLocaleString()}</span>
                     </div>
                   </div>
 
