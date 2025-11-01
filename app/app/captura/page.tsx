@@ -17,7 +17,6 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { PageHeader } from "@/components/ui/page-header";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
@@ -29,9 +28,6 @@ import {
   RotateCcw,
   Zap,
   Image as ImageIcon,
-  CheckCircle,
-  XCircle,
-  AlertTriangle,
   Download,
 } from "lucide-react";
 import { toast } from "sonner";
