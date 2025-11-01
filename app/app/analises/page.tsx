@@ -67,7 +67,6 @@ export default function AnalisesPage() {
                   <TableHead>ID</TableHead>
                   <TableHead>Data</TableHead>
                   <TableHead>% Corrosão</TableHead>
-                  <TableHead>Lote</TableHead>
                   <TableHead className="text-right">Ações</TableHead>
                 </TableRow>
               </TableHeader>
@@ -77,7 +76,6 @@ export default function AnalisesPage() {
                     <TableCell>{analise.id}</TableCell>
                     <TableCell>{analise.data}</TableCell>
                     <TableCell>{analise.corrosao.toFixed(1)}%</TableCell>
-                    <TableCell>{analise.lote}</TableCell>
                     <TableCell className="text-right">
                       <Button size="sm" variant="outline">
                         Ver Detalhes
