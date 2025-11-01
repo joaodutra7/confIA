@@ -4,7 +4,6 @@ import React from "react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { CalendarIcon, Search, Filter } from "lucide-react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -13,38 +12,22 @@ const mockAnalises = [
   {
     id: "ANL-001",
     data: "2025-09-20",
-    status: "approved",
     corrosao: 12.5,
     lote: "L001",
   },
   {
     id: "ANL-002",
     data: "2025-09-21",
-    status: "inspection",
     corrosao: 34.2,
     lote: "L002",
   },
   {
     id: "ANL-003",
     data: "2025-09-22",
-    status: "rejected",
     corrosao: 67.8,
     lote: "L001",
   },
 ];
-
-const getStatusBadge = (status: string) => {
-  switch (status) {
-    case "approved":
-      return <Badge variant="default">Aprovado</Badge>;
-    case "inspection":
-      return <Badge variant="secondary">Inspeção</Badge>;
-    case "rejected":
-      return <Badge variant="destructive">Rejeitado</Badge>;
-    default:
-      return <Badge>{status}</Badge>;
-  }
-};
 
 export default function AnalisesPage() {
   return (
@@ -83,7 +66,6 @@ export default function AnalisesPage() {
                 <TableRow>
                   <TableHead>ID</TableHead>
                   <TableHead>Data</TableHead>
-                  <TableHead>Status</TableHead>
                   <TableHead>% Corrosão</TableHead>
                   <TableHead>Lote</TableHead>
                   <TableHead className="text-right">Ações</TableHead>
@@ -94,7 +76,6 @@ export default function AnalisesPage() {
                   <TableRow key={analise.id}>
                     <TableCell>{analise.id}</TableCell>
                     <TableCell>{analise.data}</TableCell>
-                    <TableCell>{getStatusBadge(analise.status)}</TableCell>
                     <TableCell>{analise.corrosao.toFixed(1)}%</TableCell>
                     <TableCell>{analise.lote}</TableCell>
                     <TableCell className="text-right">
